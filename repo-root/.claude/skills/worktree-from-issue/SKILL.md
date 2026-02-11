@@ -21,7 +21,7 @@ Follow these steps:
    - Matches the style of existing branch names in the repo
    - Has no "/" prefix
 
-4. **Verify that the branch and worktree path (`../<repo-name>-<branch-name>`) aren't already in use** by checking `git branch -r` and `git worktree list`. If either already exists, pick a different name and repeat untill you find one that is free.
+4. **Verify that the branch and worktree path (`../ordo-<branch-name>`) aren't already in use** by checking `git branch -r` and `git worktree list`. If either already exists, pick a different name and repeat untill you find one that is free.
 
 5. **Present the branch name to the user** and ask for confirmation before proceeding. For example:
    ```
@@ -34,11 +34,11 @@ Follow these steps:
 
 7. **Create the worktree** from master:
    ```
-   git worktree add ../<repo-name>-<branch-name> -b <branch-name> origin/master
+   git worktree add ../ordo-<branch-name> -b <branch-name> origin/master
    ```
 
 8. **Tell the user how to start working there.** Print a message like:
    ```
    Worktree ready! To start Claude in the worktree, run:
-   cd ../<repo-name>-<branch-name> && claude
+   cd ../ordo-<branch-name> && claude
    ```
