@@ -20,11 +20,12 @@ Follow these steps:
 4. **If no candidates are found**, tell the user all worktrees are still active and there's nothing to clean up.
 
 5. **Present the candidates to the user.** Show a summary like:
+
    ```
    Found worktrees for branches that no longer exist on remote:
 
-   - ../ordo-72-dataset-export (branch: 72-dataset-export)
-   - ../ordo-85-fix-login-bug (branch: 85-fix-login-bug)
+   - ../<repo-name>-72-dataset-export (branch: 72-dataset-export)
+   - ../<repo-name>-85-fix-login-bug (branch: 85-fix-login-bug)
    ```
 
    Ask the user which ones they want to remove, or if they want to remove all of them.
@@ -39,6 +40,6 @@ Follow these steps:
 8. **Show a summary** of what was cleaned up:
    ```
    Cleaned up 2 worktree(s):
-   - ../ordo-72-dataset-export
-   - ../ordo-85-fix-login-bug
+   - ../<repo-name>-72-dataset-export
+   - ../<repo-name>-85-fix-login-bug
    ```

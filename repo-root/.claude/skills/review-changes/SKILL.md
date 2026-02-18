@@ -13,6 +13,12 @@ Look at the currently unstaged changes in git and review them strictly for:
 5. Edge cases that could cause failures
 6. Other similar problems or room for improvements
 
-Use `git diff` to see the unstaged changes. If there are no unstaged changes, check for staged changes with `git diff --cached` instead.
+Obtain the diff to review using this fallback chain:
+
+1. Run `git diff`. If this produces output, use it as the diff.
+2. If empty, run `git diff --cached`. If this produces output, use it as the diff.
+3. If both are empty, run `git diff master...HEAD` to see all committed changes on the current branch relative to master.
+
+If all three are empty, report that there is nothing to review and stop.
 
 Be specific — reference file names and line numbers. Only flag things that actually matter.
